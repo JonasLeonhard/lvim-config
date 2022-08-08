@@ -7,7 +7,7 @@ vim.o.guifont = "MesloLGSDZ Nerd Font"
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "material"
-vim.g.material_style = "darker"
+vim.g.material_theme_style = "darker-community"
 vim.opt.relativenumber = true
 
 -- neovide
@@ -70,8 +70,7 @@ linters.setup {
 -- Additional Plugins
 lvim.plugins = {
   -- Theme
-  { "marko-cerovac/material.nvim" },
-
+  { 'kaicataldo/material.vim' },
   -- Navigation
   {
     "phaazon/hop.nvim",
