@@ -50,10 +50,10 @@ This config configures Plugins with Packer on top of the Lunarvim base-configura
 
 ## Setup
 
-Setup neovim & lunarvim. Add this config to
+Setup neovim & lunarvim. Add this config to '~/.config/lvim'
 
 ```
-~/config/lvim
+git clone https://github.com/JonasLeonhard/lvim-config.git ~/.config/lvim
 ```
 
 Configure Neovide and add it's custom config to your path (see. https://www.lunarvim.org/01-installing.html#tips-for-neovide-users )
