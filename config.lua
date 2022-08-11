@@ -7,7 +7,7 @@ vim.o.guifont = "MesloLGSDZ Nerd Font"
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "material"
-vim.g.material_theme_style = "darker-community"
+vim.g.material_theme_style = "darker"
 vim.opt.relativenumber = true
 
 -- neovide
@@ -81,6 +81,9 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
+
+  -- Syntax (non-lsp)
+  { 'lumiliet/vim-twig' }
 
   -- Git
   -- TODO: gitblame in lualine
