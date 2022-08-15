@@ -7,7 +7,7 @@ vim.o.guifont = "MesloLGSDZ Nerd Font"
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "material"
-vim.g.material_theme_style = "darker-community"
+vim.g.material_theme_style = "darker"
 vim.opt.relativenumber = true
 
 -- neovide
@@ -83,6 +83,8 @@ lvim.plugins = {
   },
   -- Editor
   { "lukas-reineke/indent-blankline.nvim" },
+  -- Syntax (non-lsp)
+  { 'lumiliet/vim-twig' }
 }
 
 -- keymappings - which_key
@@ -90,6 +92,7 @@ lvim.builtin.which_key.mappings["t"] = {
   name = "Toggles",
   t = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
 }
+
 
 lvim.builtin.alpha.dashboard.section.header.val = {
   '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀',
