@@ -70,7 +70,7 @@ linters.setup {
 -- Additional Plugins
 lvim.plugins = {
   -- Theme
-  { 'kaicataldo/material.vim' },
+  { "kaicataldo/material.vim" },
   -- Navigation
   {
     "phaazon/hop.nvim",
@@ -81,9 +81,14 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
+  -- Editor
+  { "lukas-reineke/indent-blankline.nvim" },
+}
 
-  -- Git
-  -- TODO: gitblame in lualine
+-- keymappings - which_key
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Toggles",
+  t = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
 }
 
 lvim.builtin.alpha.dashboard.section.header.val = {
