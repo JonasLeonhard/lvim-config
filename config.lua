@@ -81,8 +81,9 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
-  -- Editor
+  -- In-Editor
   { "lukas-reineke/indent-blankline.nvim" },
+  { "anuvyklack/pretty-fold.nvim" },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' }
 }
@@ -93,6 +94,11 @@ lvim.builtin.which_key.mappings["t"] = {
   t = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
 }
 
+lvim.builtin.which_key.vmappings["z"] = {
+  name = "Fold",
+  f = { "zf", "Create fold under selection (shift-v)" },
+  d = { "zd", "Delete fold under selection (shift-v)" }
+}
 
 lvim.builtin.alpha.dashboard.section.header.val = {
   '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀',
