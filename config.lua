@@ -54,7 +54,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    -- required: 'npm i -g prettier'
+    -- required: 'npm i -g prettier' for your current nvm alias default NODE_VERSION to be set
     command = "prettier",
     extra_args = { "--print-with", "100" },
   },
@@ -63,7 +63,7 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  -- requires: 'npm i -g eslint_d'
+  -- requires: 'npm i -g eslint_d' for your current nvm alias default NODE_VERSION to be set.
   { command = "eslint_d", filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" } },
 }
 
@@ -81,8 +81,9 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
-  -- Editor
+  -- In-Editor
   { "lukas-reineke/indent-blankline.nvim" },
+  { "anuvyklack/pretty-fold.nvim" },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' }
 }
@@ -99,6 +100,11 @@ lvim.builtin.which_key.mappings["t"] = {
   }
 }
 
+lvim.builtin.which_key.vmappings["z"] = {
+  name = "Fold",
+  f = { "zf", "Create fold under selection (shift-v)" },
+  d = { "zd", "Delete fold under selection (shift-v)" }
+}
 
 lvim.builtin.alpha.dashboard.section.header.val = {
   '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀',
