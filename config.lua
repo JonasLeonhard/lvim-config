@@ -90,7 +90,13 @@ lvim.plugins = {
 -- keymappings - which_key
 lvim.builtin.which_key.mappings["t"] = {
   name = "Toggles",
-  t = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
+  _ = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
+  t = {
+    name = "Terminal",
+    f = { "<cmd>ToggleTerm toggle<cr>", "ToggleTerm floating" },
+    h = { "<cmd>ToggleTerm toggle direction=horizontal<cr>", "ToggleTerm horizontal" },
+    v = { "<cmd>ToggleTerm toggle size=80 direction=vertical<cr>", "ToggleTerm vertical" }
+  }
 }
 
 
