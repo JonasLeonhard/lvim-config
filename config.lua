@@ -19,8 +19,7 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>" -- save
 lvim.keys.normal_mode["<esc>"] = ":noh<cr>" -- clear ?: searches with esc
 
-
--- TODO: User Config for predefined plugins
+-- User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -48,7 +47,6 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell", "phpdoc" }
 lvim.builtin.treesitter.highlight.enabled = true
 
-
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
@@ -64,7 +62,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   -- requires: 'npm i -g eslint_d' for your current nvm alias default NODE_VERSION to be set.
-  { command = "eslint_d", filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" } },
+  { command = "eslint_d" },
 }
 
 -- Additional Plugins
@@ -83,21 +81,65 @@ lvim.plugins = {
   },
   -- In-Editor
   { "lukas-reineke/indent-blankline.nvim" },
+  { "petertriho/nvim-scrollbar" },
   { "anuvyklack/pretty-fold.nvim" },
+  { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
+  { "norcalli/nvim-colorizer.lua" },
   -- Syntax (non-lsp)
-  { 'lumiliet/vim-twig' }
+  { 'lumiliet/vim-twig' },
 }
+-- Plugin Setups - TODO: why is config not working?
+local scrollbar_ok, scrollbar = pcall(require, "scrollbar")
+if (scrollbar_ok) then
+  scrollbar.setup()
+end
+
+local prettyFold_ok, prettyFold = pcall(require, "pretty-fold")
+if (prettyFold_ok) then
+  prettyFold.setup({
+    keep_indentation = false,
+    fill_char = '━',
+    sections = {
+      left = {
+        '━ ', function() return string.rep('*', vim.v.foldlevel) end, ' ━┫', 'content', '┣'
+      },
+      right = {
+        '┫ ', 'number_of_folded_lines', ': ', 'percentage', ' ┣━━',
+      }
+    }
+  })
+end
+
+local todo_ok, todo = pcall(require, "todo-comments")
+if (todo_ok) then
+  todo.setup()
+end
+
+local colorizer_ok, colorizer = pcall(require, "colorizer")
+if (colorizer_ok) then
+  colorizer.setup()
+end
 
 -- keymappings - which_key
 lvim.builtin.which_key.mappings["t"] = {
   name = "Toggles",
-  _ = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
+  _ = {
+    name = "Settings",
+    b = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" }
+  },
   t = {
     name = "Terminal",
     f = { "<cmd>ToggleTerm toggle<cr>", "ToggleTerm floating" },
     h = { "<cmd>ToggleTerm toggle direction=horizontal<cr>", "ToggleTerm horizontal" },
     v = { "<cmd>ToggleTerm toggle size=80 direction=vertical<cr>", "ToggleTerm vertical" }
-  }
+  },
+  d = {
+    name = "Todo",
+    q = { "<cmd>TodoQuickFix<cr>", "TodoQuickFix - list todos" },
+    l = { "<cmd>TodoLocList<cr>", "TodoLocList - list todo locations" },
+    t = { "<cmd>TodoTrouble<cr>", "TodoTrouble - view in trouble" },
+    s = { "<cmd>TodoTelescope<cr>", "TodoQuickFix - telescope view" },
+  },
 }
 
 lvim.builtin.which_key.vmappings["z"] = {
