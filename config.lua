@@ -63,7 +63,7 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  -- requires: 'npm i -g eslint_d'
+  -- requires: 'npm i -g eslint_d' and nvm alias default NODE_VERSION to be set.
   { command = "eslint_d", filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" } },
 }
 
