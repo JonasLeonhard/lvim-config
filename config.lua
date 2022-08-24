@@ -82,13 +82,14 @@ lvim.plugins = {
   -- In-Editor
   { "lukas-reineke/indent-blankline.nvim" },
   { "petertriho/nvim-scrollbar" },
-  -- { "anuvyklack/pretty-fold.nvim" },
   { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { "norcalli/nvim-colorizer.lua" },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
+  { 'windwp/nvim-ts-autotag' }
 }
+
 -- Plugin Setups - TODO: why is config not working?
 local scrollbar_ok, scrollbar = pcall(require, "scrollbar")
 if (scrollbar_ok) then
@@ -138,6 +139,15 @@ if (indent_ok) then
   })
   indentBlankline.setup({
     show_current_context = true,
+  })
+end
+
+local tsautotag_ok, tsautotag = pcall(require, "nvim-ts-autotag")
+if (tsautotag_ok) then
+  tsautotag.setup({
+    autotag = {
+      enable = true,
+    }
   })
 end
 
