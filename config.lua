@@ -98,13 +98,13 @@ local prettyFold_ok, prettyFold = pcall(require, "pretty-fold")
 if (prettyFold_ok) then
   prettyFold.setup({
     keep_indentation = false,
-    fill_char = '━',
+    fill_char = ' ',
     sections = {
       left = {
-        '━ ', function() return string.rep('*', vim.v.foldlevel) end, ' ━┫', 'content', '┣'
+        'content', '…'
       },
       right = {
-        '┫ ', 'number_of_folded_lines', ': ', 'percentage', ' ┣━━',
+        '… ', 'number_of_folded_lines', ':', 'percentage', '%',
       }
     }
   })
