@@ -160,12 +160,6 @@ lvim.builtin.which_key.mappings["t"] = {
   }
 }
 
-lvim.builtin.which_key.vmappings["z"] = {
-  name = "Fold",
-  f = { "zf", "Create fold under selection (shift-v)" },
-  d = { "zd", "Delete fold under selection (shift-v)" }
-}
-
 lvim.builtin.alpha.dashboard.section.header.val = {
   '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀',
   '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⣠⣦⣄⣀⣴⣦⣄⣈⣻⣿⣿⣿⣿⣿⣿⡇ ',
