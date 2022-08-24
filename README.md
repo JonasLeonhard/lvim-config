@@ -50,15 +50,23 @@ This config configures Plugins with Packer on top of the Lunarvim base-configura
 
 ## Setup
 
-Setup neovim & lunarvim. Add this config to '~/.config/lvim'
+Setup neovim, lunarvim & neovide. Add this config to '~/.config/lvim'
 
 ```
 rm -rf ~/.config/lvim
 git clone https://github.com/JonasLeonhard/lvim-config.git ~/.config/lvim
 ```
-now open nvim and run to install config
+
+now open neovide nvim and run to install config
+
 ```
 :PackerSync
+```
+
+add a nvim command alias to your ~/zshrc
+
+```
+alias nvim=~/.config/lvim/lvim-gui.sh
 ```
 
 Configure Neovide and add it's custom config to your path (see. https://www.lunarvim.org/01-installing.html#tips-for-neovide-users )
