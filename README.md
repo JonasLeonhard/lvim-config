@@ -41,11 +41,17 @@ UNDER CONSTRUCTION
 This config configures Plugins with Packer on top of the Lunarvim base-configuration. Added Configs / Plugins are:
 
 - Gui Client: Neovide
-- Hop Quick Search
-- Material Theme
 - MesloLGSDZ Nerd Font
-- Sidebar To The Right
-- Custom Alpha Dashboard
+- kaicataldo/material.vim Material theme
+- phazoon/hop.nvim fast motions
+- lukas-reineke/indent-blankline.nvim with custom highlighting for current_context
+- petertriho/nvim-scrollbar scrollbar with diagnostic indicators
+- kevinhwang91/nvim-ufo nvim-fold customization with cusmized clickable icons and highlighted fold lines
+- folke/todo-comments.nvim Highlighting for Todo comments
+- norcalli/nvim-colorizer.lua Color highlighting in code
+- lumiliet/vim-twig .twig file syntax highlighting
+- windwp/nvim-ts-autotag autotag closing for <div></div>...
+- Custom Alpha Dashboard Icon
 - Null-Ls config for prettier & eslint
 
 ## Setup
