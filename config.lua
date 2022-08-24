@@ -82,7 +82,8 @@ lvim.plugins = {
   -- In-Editor
   { "lukas-reineke/indent-blankline.nvim" },
   { "petertriho/nvim-scrollbar" },
-  { "anuvyklack/pretty-fold.nvim" },
+  -- { "anuvyklack/pretty-fold.nvim" },
+  { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { "norcalli/nvim-colorizer.lua" },
   -- Syntax (non-lsp)
@@ -94,23 +95,17 @@ if (scrollbar_ok) then
   scrollbar.setup()
 end
 
-local prettyFold_ok, prettyFold = pcall(require, "pretty-fold")
-if (prettyFold_ok) then
-  vim.opt.foldmethod = "expr"
-  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+local ufold_ok, ufold = pcall(require, "ufo")
+if (ufold_ok) then
+  vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+  vim.o.foldcolumn = '1'
+  vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+  vim.o.foldenable = true
   vim.opt.foldlevelstart = 99
-
-  prettyFold.setup({
-    keep_indentation = false,
-    fill_char = ' ',
-    sections = {
-      left = {
-        'content', '…'
-      },
-      right = {
-        '… ', 'number_of_folded_lines', ':', 'percentage', '%',
-      }
-    }
+  ufold.setup({
+    provider_selector = function(bufnr, filetype, buftype)
+      return { 'treesitter', 'indent' }
+    end
   })
 end
 
