@@ -140,6 +140,10 @@ lvim.builtin.which_key.mappings["t"] = {
     t = { "<cmd>TodoTrouble<cr>", "TodoTrouble - view in trouble" },
     s = { "<cmd>TodoTelescope<cr>", "TodoQuickFix - telescope view" },
   },
+  e = {
+    name = "Explorer",
+    g = { "g?", "g? -> show explorer commands" }
+  }
 }
 
 lvim.builtin.which_key.vmappings["z"] = {
