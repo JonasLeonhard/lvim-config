@@ -120,6 +120,16 @@ if (colorizer_ok) then
   colorizer.setup()
 end
 
+local indent_ok, indentBlankline = pcall(require, "indent_blankline")
+if (indent_ok) then
+  vim.api.nvim_create_autocmd("BufEnter", {
+    command = "highlight IndentBlanklineContextChar guifg=#7c7589 gui=nocombine",
+  })
+  indentBlankline.setup({
+    show_current_context = true,
+  })
+end
+
 -- keymappings - which_key
 lvim.builtin.which_key.mappings["t"] = {
   name = "Toggles",
