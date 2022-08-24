@@ -96,6 +96,10 @@ end
 
 local prettyFold_ok, prettyFold = pcall(require, "pretty-fold")
 if (prettyFold_ok) then
+  vim.opt.foldmethod = "expr"
+  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+  vim.opt.foldlevelstart = 99
+
   prettyFold.setup({
     keep_indentation = false,
     fill_char = ' ',
