@@ -50,7 +50,7 @@ This config configures Plugins with Packer on top of the Lunarvim base-configura
 - folke/todo-comments.nvim Highlighting for Todo comments
 - norcalli/nvim-colorizer.lua Color highlighting in code
 - lumiliet/vim-twig .twig file syntax highlighting
-- windwp/nvim-ts-autotag autotag closing for <div></div>...
+- windwp/nvim-ts-autotag autotag closing for div...
 - Custom Alpha Dashboard Icon
 - Null-Ls config for prettier & eslint
 
@@ -63,38 +63,18 @@ rm -rf ~/.config/lvim
 git clone https://github.com/JonasLeonhard/lvim-config.git ~/.config/lvim
 ```
 
-now open neovide nvim and run to install config
-
-```
-:PackerSync
-```
-
 add a nvim command alias to your ~/zshrc
 
 ```
 alias nvim=~/.config/lvim/lvim-gui.sh
 ```
 
-## Known Issues
-
-These are Features i want to add to this config in the Future:
+now open neovide nvim and run to install config
 
 ```
-- Theming more like Material Legacy theme [ ]
-- Lualine gitblame integration [ ]
-- Custom LazyGit styling  [ ]
-- Neovide [x]
-- uickfix space lq -> mappen to '.' like vscode? [ ]
-- copy paste to cmd-v + p mappen (added to yy + p)? + move line alt+arrow? [ ]
-- styled components & vue TreeSitter highlighting (Maybe styling issue?) [ ]
-- fileexplorer unchangeable root dir ?maybe? [ ]
-- fileexplorer view files (images) + add files from editor?, open images directly not working? [ ]
-- linting ? eslint /prettier not working -> Null-ls support [x]
-- eslint quickfix? [ ]
-- below tabs path to components [ ]
-- autosave ? [ ]
-- line connectors between <div> </div> [ ]
-- rainbow brackets {{}} [ ]
-- collapse code ?already implemented? [ ]
-- autoformat throws eslint errors eg - BuMoleculeARticleBox^
+:PackerSync
 ```
+
+## Known Issues / Missing Features
+
+---
