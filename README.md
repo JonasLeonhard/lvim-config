@@ -69,8 +69,6 @@ add a nvim command alias to your ~/zshrc
 alias nvim=~/.config/lvim/lvim-gui.sh
 ```
 
-Configure Neovide and add it's custom config to your path (see. https://www.lunarvim.org/01-installing.html#tips-for-neovide-users )
-
 ## Known Issues
 
 These are Features i want to add to this config in the Future:
