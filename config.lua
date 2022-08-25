@@ -85,6 +85,10 @@ lvim.plugins = {
   { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { "norcalli/nvim-colorizer.lua" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
   { 'windwp/nvim-ts-autotag' }
@@ -174,6 +178,15 @@ lvim.builtin.which_key.mappings["t"] = {
   e = {
     name = "Explorer",
     g = { "g?", "g? -> show explorer commands" }
+  },
+  a = {
+    name = "Diagnostics",
+    a = { "<cmd>TroubleToggle<cr>", "trouble" },
+    w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
+    d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
+    q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+    l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+    r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
   }
 }
 
