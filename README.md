@@ -75,6 +75,22 @@ now open neovide nvim and run to install config
 :PackerSync
 ```
 
+## MacOS
+
+copy the NVIMRunner into the /Applications folder:
+This allows to Start Nvim via Spotlight / via right click of a file -> open with.
+The script used to generate the NvimRunner.app in Automator can be found in nvimRunner.applescript (credit goes to <a href="https://gregrs-uk.github.io/2018-11-01/open-files-neovim-iterm2-macos-finder/">Open files in Nvim</a>)
+
+Issues: To Update the icon, right-click and get info.
+
+```
+cp -R NvimRunner.app /Applications/
+```
+
 ## Known Issues / Missing Features
 
 ---
+
+```
+
+```
