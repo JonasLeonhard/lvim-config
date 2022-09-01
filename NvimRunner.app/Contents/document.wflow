@@ -54,7 +54,7 @@
 					<string>on run {input, parameters}	
   # seem to need the full path at least in some cases	
   # -p opens files in separate tabs
-  set nvimCommand to "nvim"
+  set nvimCommand to "nvim "
 
   set filepaths to ""
   if input is not {} then
@@ -92,15 +92,15 @@ end run
 				<key>Class Name</key>
 				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>3DA36507-8F8D-4B9F-9216-8F633BB6FAA7</string>
+				<string>80E9FF65-9F97-4450-9B5C-24B4784D3738</string>
 				<key>Keywords</key>
 				<array>
 					<string>Ausführen</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>C8293878-F8D6-4B84-B0C1-361DB11A9F85</string>
+				<string>056D1AB2-346F-42B4-865C-BAE5DBE7F7D5</string>
 				<key>UUID</key>
-				<string>CD6C393F-284E-42C7-869F-8172F4F8969A</string>
+				<string>2E314088-4AFF-4289-8472-D9930A82A712</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>

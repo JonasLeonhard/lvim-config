@@ -1,7 +1,7 @@
 on run {input, parameters}	
   # seem to need the full path at least in some cases	
   # -p opens files in separate tabs
-  set nvimCommand to "nvim"
+  set nvimCommand to "nvim "
 
   set filepaths to ""
   if input is not {} then
