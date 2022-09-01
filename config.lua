@@ -18,6 +18,8 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>" -- save
 lvim.keys.normal_mode["<esc>"] = ":noh<cr>" -- clear ?: searches with esc
+lvim.keys.normal_mode["<D-v>"] = "p" -- paste cmd-v
+lvim.keys.normal_mode["<D-c>"] = "y" -- copy cmd-c
 
 -- User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
