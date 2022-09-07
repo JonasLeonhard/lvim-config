@@ -9,9 +9,16 @@ lvim.format_on_save = true
 lvim.colorscheme = "material"
 vim.g.material_theme_style = "darker"
 vim.opt.relativenumber = true
+vim.g.syntax_on = true
+vim.o.syntax = "on"
 
 -- neovide
 vim.g.neovide_cursor_animation_length = 0.025
+
+-- autocommands
+vim.api.nvim_create_autocmd("BufEnter", {
+  command = "syntax on", -- syntax_on/syntax does not work for some reason
+});
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
