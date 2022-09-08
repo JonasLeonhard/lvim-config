@@ -101,11 +101,11 @@ lvim.plugins = {
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
   { 'windwp/nvim-ts-autotag' },
-  -- Debugging (install specific debug-client via :mason)
-  { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" } -- dap installed via lunarvim
+  { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" }, -- nvim-dap installed via lunarvim
+  { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" }
 }
 
--- Plugin Setups - TODO: why is config not working?
+-- Plugin Setups
 local scrollbar_ok, scrollbar = pcall(require, "scrollbar")
 if (scrollbar_ok) then
   scrollbar.setup()
@@ -166,23 +166,29 @@ if (tsautotag_ok) then
   })
 end
 
-local debug_ok = pcall(require, "dap")
-local debug_ui_ok, debugUi = pcall(require, "dapui")
+-- debugging
+local dap_ok, dap = pcall(require, "dap")
+local dap_ui_ok, dapui = pcall(require, "dapui")
+local telescope_ok, telescope = pcall(require, "telescope")
 
-if (debug_ok and debug_ui_ok) then
-  debugUi.setup();
+if (dap_ok) then
+  if (dap_ui_ok) then
+    dapui.setup();
+    dap.listeners.after.event_initialized["dapui_config"] = function()
+      dapui.open()
+    end
+    dap.listeners.before.event_terminated["dapui_config"] = function()
+      dapui.close()
+    end
+    dap.listeners.before.event_exited["dapui_config"] = function()
+      dapui.close()
+    end
+  end
 
-  lvim.builtin.which_key.mappings['d'] = {
-    name = "Debug",
-    b = { "<cmd>:lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint toggle" },
-    c = { "<cmd>:lua require'dap'.continue()<cr>", "Continue or Launch Session" },
-    o = { "<cmd>:lua require'dap'.step_over()<cr>", "Step over" },
-    i = { "<cmd>:lua require'dap'.continue()<cr>", "Step into" },
-    r = { "<cmd>:lua require'dap'.repl.open()<cr>", "Inspecting State via builtin REPL" },
-    d = { "<cmd>:lua require('dapui').toggle()<cr>", "Toggle UI" }
-  }
+  if (telescope_ok) then
+    pcall(telescope.load_extension, "dap")
+  end
 end
-
 
 -- keymappings - which_key
 lvim.builtin.which_key.mappings["t"] = {
