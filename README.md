@@ -31,10 +31,17 @@ This Project aims to provide a personal portfolio about me and my work, aswell a
 i write what comes to my mind.
 UNDER CONSTRUCTION
 
+config code:
+
+1. Plugins are beeing loaded with packer in lua/user/plugins via "Packer"
+2. general or plugin specific Configuration is loaded in lua/user/\*.
+
 ## Screenshots
 
 <![UNDER CONSTRUCTION](./readme/Dashboard.png)
 <![MainView](./readme/MainView.png)
+
+>
 
 ## Technologies
 
