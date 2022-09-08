@@ -37,6 +37,7 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.dap.active = true;
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -99,7 +100,9 @@ lvim.plugins = {
   },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
-  { 'windwp/nvim-ts-autotag' }
+  { 'windwp/nvim-ts-autotag' },
+  -- Debugging (install specific debug-client via :mason)
+  { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" } -- dap installed via lunarvim
 }
 
 -- Plugin Setups - TODO: why is config not working?
@@ -162,6 +165,24 @@ if (tsautotag_ok) then
     }
   })
 end
+
+local debug_ok = pcall(require, "dap")
+local debug_ui_ok, debugUi = pcall(require, "dapui")
+
+if (debug_ok and debug_ui_ok) then
+  debugUi.setup();
+
+  lvim.builtin.which_key.mappings['d'] = {
+    name = "Debug",
+    b = { "<cmd>:lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint toggle" },
+    c = { "<cmd>:lua require'dap'.continue()<cr>", "Continue or Launch Session" },
+    o = { "<cmd>:lua require'dap'.step_over()<cr>", "Step over" },
+    i = { "<cmd>:lua require'dap'.continue()<cr>", "Step into" },
+    r = { "<cmd>:lua require'dap'.repl.open()<cr>", "Inspecting State via builtin REPL" },
+    d = { "<cmd>:lua require('dapui').toggle()<cr>", "Toggle UI" }
+  }
+end
+
 
 -- keymappings - which_key
 lvim.builtin.which_key.mappings["t"] = {
