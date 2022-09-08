@@ -36,6 +36,18 @@ config code:
 1. Plugins are beeing loaded with packer in lua/user/plugins via "Packer"
 2. general or plugin specific Configuration is loaded in lua/user/\*.
 
+Install LSP's, run:
+
+```
+:Mason
+```
+
+Install Treesitter Syntax highlighting, run:
+
+```
+:TSInstall all // or :TSInstallInfo for a list of installable options
+```
+
 ## Screenshots
 
 <![UNDER CONSTRUCTION](./readme/Dashboard.png)
