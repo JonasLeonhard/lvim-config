@@ -186,7 +186,15 @@ if (dap_ok) then
   end
 
   if (telescope_ok) then
-    pcall(telescope.load_extension, "dap")
+    telescope.load_extension("dap")
+    lvim.builtin.which_key.mappings["de"] = {
+      name = "Telescope-Dap",
+      c = { "<cmd>:Telescope dap commands<cr>", "Commands" },
+      C = { "<cmd>:Telescope dap configurations<cr>", "Configurations" },
+      b = { "<cmd>:Telescope dap list_breakpoints<cr>", "Breakpoints" },
+      v = { "<cmd>:Telescope dap variables<cr>", "Variables" },
+      f = { "<cmd>:Telescope dap frames<cr>", "Frames" }
+    }
   end
 end
 
