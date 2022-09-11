@@ -1,5 +1,5 @@
 -- INFO: this config requires lunarvim.org's base config to be installed.
-require "user.plugins"
+require "user.plugins" -- run :PackerUpdate to istall new plugins
 
 -- plugin configs
 require "user.alpha"

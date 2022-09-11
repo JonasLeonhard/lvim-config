@@ -25,6 +25,8 @@ lvim.plugins = {
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
   { 'windwp/nvim-ts-autotag' },
+  -- Debugging
   { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" }, -- nvim-dap installed via lunarvim
-  { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" }
+  { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" },
+  { "theHamsta/nvim-dap-virtual-text", requires = "mfussenegger/nvim-dap" },
 }
