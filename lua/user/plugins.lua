@@ -23,6 +23,8 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  -- Git
+  { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
   { 'windwp/nvim-ts-autotag' },

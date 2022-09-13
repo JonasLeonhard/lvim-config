@@ -59,3 +59,10 @@ lvim.builtin.which_key.mappings["m"] = {
     t = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(5)" },
   }
 }
+
+lvim.builtin.which_key.mappings["gD"] = {
+  name = "Diffview",
+  h = { "<cmd>DiffviewFileHistory %<cr>", "File History" },
+  g = { "<cmd>DiffviewFileHistory<cr>", "Commit History global" },
+  c = { "<cmd>DiffviewClose<cr>", "Diffview Close" }
+}
