@@ -45,8 +45,8 @@ lvim.builtin.which_key.mappings["t"] = {
 
 lvim.builtin.which_key.mappings["m"] = {
   name = "Harpoon",
-  m = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
-  M = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
+  M = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
+  m = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
   a = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Add File Mark" },
   g = {
     name = "GoTo",
