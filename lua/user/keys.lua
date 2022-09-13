@@ -40,5 +40,22 @@ lvim.builtin.which_key.mappings["t"] = {
     q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
     l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
     r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+  },
+}
+
+lvim.builtin.which_key.mappings["m"] = {
+  name = "Harpoon",
+  m = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
+  M = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
+  a = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Add File Mark" },
+  g = {
+    name = "GoTo",
+    n = { "<cmd>:lua require('harpoon.ui').nav_next() <cr>", "Next Mark" },
+    b = { "<cmd>:lua require('harpoon.ui').nav_prev()<cr>", "Prev Mark" },
+    q = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(1)" },
+    w = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(2)" },
+    e = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(3)" },
+    r = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(4)" },
+    t = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(5)" },
   }
 }

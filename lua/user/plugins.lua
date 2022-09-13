@@ -12,6 +12,7 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
+  { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
   -- In-Editor
   { "lukas-reineke/indent-blankline.nvim" },
   { "petertriho/nvim-scrollbar" },
