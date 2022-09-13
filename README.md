@@ -94,6 +94,15 @@ now open neovide nvim and run to install config
 :PackerSync
 ```
 
+install Lazygit config + delta gitdiff view:
+
+```
+brew install lazygit
+brew install git-delta
+cp ./lazygit.config.yml ~/Library/Application\ Support/lazygit
+mv ~/Library/Application\ Support/lazygit/lazygit.config.yml ~/Library/Application\ Support/lazygit/config.yml
+```
+
 ## MacOS
 
 copy the NVIMRunner into the /Applications folder:
