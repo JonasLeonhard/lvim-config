@@ -6,3 +6,4 @@ vim.g.material_theme_style = "darker"
 vim.opt.relativenumber = true
 vim.g.syntax_on = true
 vim.o.syntax = "on"
+lvim.builtin.autopairs.active = false
