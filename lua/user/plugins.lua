@@ -23,6 +23,9 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim"
+  },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Syntax (non-lsp)
