@@ -4,9 +4,9 @@ if not toggleterm_ok then
   return
 end
 
--- lvim.builtin.terminal.float_opts = {
---   width = 100,
---   height = 100
--- } -- TODO: get full width / height
-lvim.builtin.terminal.open_mapping = "<C-/>"
-lvim.builtin.terminal.open_mapping = "<C-7>"
+-- as of right now, neovide crashes when the width or height of a floating window increased beyond the actual window size.
+lvim.builtin.terminal.float_opts = {
+  width = 100000,
+  height = 100000
+}
+lvim.builtin.terminal.open_mapping = "<C-t>"
