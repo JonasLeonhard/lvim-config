@@ -14,7 +14,6 @@ lvim.plugins = {
   },
   { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
   -- In-Editor
-  { "lukas-reineke/indent-blankline.nvim" },
   { "petertriho/nvim-scrollbar" },
   { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
