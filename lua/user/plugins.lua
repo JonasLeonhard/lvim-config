@@ -14,7 +14,6 @@ lvim.plugins = {
   },
   { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
   -- In-Editor
-  { "lukas-reineke/indent-blankline.nvim" },
   { "petertriho/nvim-scrollbar" },
   { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
@@ -22,6 +21,9 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
+  },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim"
   },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
