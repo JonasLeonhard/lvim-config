@@ -15,6 +15,13 @@ lvim.plugins = {
   { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
   -- In-Editor
   { "petertriho/nvim-scrollbar" },
+  {
+    "karb94/neoscroll.nvim",
+    event = "WinScrolled",
+    config = function()
+      require('neoscroll').setup()
+    end
+  },
   { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { "norcalli/nvim-colorizer.lua" },
