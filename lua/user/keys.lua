@@ -13,7 +13,7 @@ lvim.builtin.which_key.mappings["t"] = {
   _ = {
     name = "Settings",
     b = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
-    F = { "<cmd>:lua lvim.format_on_save = not lvim.format_on_save<CR>", "Toggle Format_on_save" },
+    F = { "<cmd>LvimToggleFormatOnSave<CR>", "Toggle Format_on_save" },
   },
   t = {
     name = "Terminal",
