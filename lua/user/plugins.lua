@@ -32,6 +32,7 @@ lvim.plugins = {
   {
     "nvim-telescope/telescope-live-grep-args.nvim"
   },
+  { "j-hui/fidget.nvim" },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Syntax (non-lsp)
