@@ -7,3 +7,4 @@ vim.opt.relativenumber = true
 vim.g.syntax_on = true
 vim.o.syntax = "on"
 lvim.builtin.autopairs.active = false
+lvim.builtin.cmp.experimental.ghost_text = true
