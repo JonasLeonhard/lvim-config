@@ -6,6 +6,10 @@ lvim.plugins = {
   {
     "phaazon/hop.nvim",
     event = "BufRead",
+    config = function()
+      require("hop").setup()
+      require("user.hop");
+    end,
   },
   { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
   -- In-Editor
