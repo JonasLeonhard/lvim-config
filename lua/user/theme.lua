@@ -5,6 +5,7 @@ if not ok then
 end
 
 catppuccin.setup({
+  term_colors = true,
   integrations = {
     cmp = true,
     fidget = true,
@@ -15,9 +16,18 @@ catppuccin.setup({
     telescope = true,
     treesitter = true,
     which_key = true,
+    notify = true,
     indent_blankline = {
       enabled = true,
       colored_indent_levels = false,
+    },
+    dap = {
+      enabled = true,
+      enable_ui = true,
+    },
+    navic = {
+      enabled = true,
+      custom_bg = "NONE",
     },
     native_lsp = {
       enabled = true,
