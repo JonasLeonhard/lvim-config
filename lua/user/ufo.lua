@@ -7,14 +7,14 @@ if (ufold_ok) then
   vim.opt.foldlevelstart = 99
 
   vim.api.nvim_create_autocmd("BufEnter", {
-    command = "highlight FoldColumn guibg=#161616",
+    command = "highlight FoldColumn guibg=#1d1d2b",
   })
   vim.api.nvim_create_autocmd("BufEnter", {
-    command = "highlight Folded guibg=#161616",
+    command = "highlight Folded guibg=#1d1d2b",
   })
   -- reset cursorLine to theme background, as folded / foldcolumn also alters cursorLine background
   vim.api.nvim_create_autocmd("BufEnter", {
-    command = "highlight CursorLine guibg=#212121",
+    command = "highlight CursorLine guibg=#1d1d2b",
   })
 
   ufold.setup({

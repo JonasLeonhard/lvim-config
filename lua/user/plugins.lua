@@ -1,7 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
   -- Theme
-  { "kaicataldo/material.vim" },
+  { "catppuccin/nvim", as = "catppuccin" },
   -- Navigation
   {
     "phaazon/hop.nvim",
