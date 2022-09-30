@@ -36,6 +36,7 @@ lvim.plugins = {
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Syntax (non-lsp)
   { 'lumiliet/vim-twig' },
+  { 'Glench/Vim-Jinja2-Syntax' }, -- .njk
   { 'windwp/nvim-ts-autotag' },
   -- Debugging
   { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" }, -- nvim-dap installed via lunarvim
