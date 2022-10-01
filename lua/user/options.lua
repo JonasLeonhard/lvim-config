@@ -6,9 +6,6 @@ vim.o.syntax = "on"
 
 vim.opt.relativenumber = true
 vim.opt.conceallevel = 0 -- makes hidden whitespace visiable
-vim.opt.undofile = true -- persisten undo
-vim.opt.smartindent = true
-vim.opt.smartcase = true
 
 lvim.format_on_save = true
 lvim.colorscheme = "catppuccin"
