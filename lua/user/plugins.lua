@@ -34,10 +34,10 @@ lvim.plugins = {
   { "j-hui/fidget.nvim" },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
-  -- Syntax (non-lsp)
-  { 'lumiliet/vim-twig' },
+  -- Language Support
+  { 'lumiliet/vim-twig' }, -- .twig
   { 'Glench/Vim-Jinja2-Syntax' }, -- .njk
-  { 'windwp/nvim-ts-autotag' },
+  { 'windwp/nvim-ts-autotag' }, -- .tsx
   -- Debugging
   { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" }, -- nvim-dap installed via lunarvim
   { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" },
