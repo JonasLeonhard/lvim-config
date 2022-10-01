@@ -24,7 +24,7 @@ Custom <a href="https://www.lunarvim.org/)">Lvim</a> Neovim Configuration. Aimin
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Known Issues](#known-issues)
-- [Credits] (#credits)
+- [Credits](#credits)
 
 ## General Info
 
