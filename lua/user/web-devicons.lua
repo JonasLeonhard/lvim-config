@@ -4,11 +4,20 @@ if not ok then
   return
 end
 
--- TODO: this does not work for .njk files
-devicons.set_icon = {
-  njk = {
-    icon = "📦",
+devicons.set_icon({
+  ["njk"] = {
+    icon = "",
+    color = "#374c0b",
+    name = "Nunjucks",
+  },
+  ["twig"] = {
+    icon = "",
     color = "#8FAA54",
-    name = "njk",
+    name = "Twig",
+  },
+  ["applescript"] = {
+    icon = "",
+    color = "#ffffff",
+    name = "Applescript",
   }
-}
+})

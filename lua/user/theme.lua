@@ -5,6 +5,7 @@ if not ok then
 end
 
 lvim.colorscheme = "catppuccin"
+vim.g.catppuccin_flavour = "mocha"
 
 catppuccin.setup({
   term_colors = true,
