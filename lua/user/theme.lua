@@ -49,3 +49,14 @@ catppuccin.setup({
     },
   },
 })
+
+-- catppuccin compile after :PackerCompile
+vim.api.nvim_create_autocmd("User", {
+  pattern = "PackerCompileDone",
+  callback = function()
+    catppuccin.compile()
+    vim.defer_fn(function()
+      vim.cmd "colorscheme catppuccin"
+    end, 0) -- Defered for live reloading
+  end
+})
