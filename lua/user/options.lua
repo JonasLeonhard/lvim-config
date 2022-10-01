@@ -5,6 +5,7 @@ vim.o.syntax = "on"
 
 vim.opt.relativenumber = true
 vim.opt.conceallevel = 0 -- makes hidden whitespace visiable
+vim.o.ch = 0 -- commandheight
 
 lvim.format_on_save = true
 lvim.log.level = "warn"
