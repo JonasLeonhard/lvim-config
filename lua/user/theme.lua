@@ -4,6 +4,8 @@ if not ok then
   return
 end
 
+lvim.colorscheme = "catppuccin"
+
 catppuccin.setup({
   term_colors = true,
   integrations = {
