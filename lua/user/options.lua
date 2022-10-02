@@ -10,5 +10,9 @@ vim.o.ch = 0 -- commandheight
 lvim.format_on_save = true
 lvim.log.level = "warn"
 lvim.builtin.autopairs.active = false
+
+lvim.builtin.bufferline.active = false
+vim.opt.showtabline = 0
+
 lvim.builtin.cmp.experimental.ghost_text = true
 lvim.builtin.treesitter.highlight.enabled = true
