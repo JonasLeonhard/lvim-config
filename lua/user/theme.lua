@@ -8,7 +8,7 @@ lvim.colorscheme = "catppuccin"
 vim.g.catppuccin_flavour = "mocha"
 
 catppuccin.setup({
-  term_colors = true,
+  term_colors = false,
   integrations = {
     cmp = true,
     fidget = true,
