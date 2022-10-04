@@ -39,7 +39,6 @@ lvim.plugins = {
   { 'Glench/Vim-Jinja2-Syntax' }, -- .njk
   { 'windwp/nvim-ts-autotag' }, -- .tsx
   -- Debugging
-  { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" }, -- nvim-dap installed via lunarvim
   { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" },
   { "theHamsta/nvim-dap-virtual-text", requires = "mfussenegger/nvim-dap" },
 }
