@@ -21,7 +21,7 @@ lvim.plugins = {
       require('neoscroll').setup()
     end
   },
-  { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
+  { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { "norcalli/nvim-colorizer.lua" },
   {
@@ -35,9 +35,9 @@ lvim.plugins = {
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Language Support
-  { 'lumiliet/vim-twig' }, -- .twig
-  { 'Glench/Vim-Jinja2-Syntax' }, -- .njk
-  { 'windwp/nvim-ts-autotag' }, -- .tsx
+  { "lumiliet/vim-twig" }, -- .twig
+  { "Glench/Vim-Jinja2-Syntax" }, -- .njk
+  { "windwp/nvim-ts-autotag" }, -- .tsx
   -- Debugging
   { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" },
   { "theHamsta/nvim-dap-virtual-text", requires = "mfussenegger/nvim-dap" },
