@@ -9,6 +9,10 @@ vim.g.catppuccin_flavour = "mocha"
 
 catppuccin.setup({
   term_colors = false,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = true
+  },
   integrations = {
     cmp = true,
     fidget = true,

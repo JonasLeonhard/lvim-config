@@ -7,7 +7,6 @@ lvim.plugins = {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
-      require("hop").setup()
       require("user.hop");
     end,
   },
@@ -32,6 +31,7 @@ lvim.plugins = {
     "nvim-telescope/telescope-live-grep-args.nvim"
   },
   { "j-hui/fidget.nvim" },
+  { "ray-x/lsp_signature.nvim" },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Language Support
