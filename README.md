@@ -66,7 +66,7 @@ This config configures Plugins with Packer on top of the Lunarvim base-configura
 - kevinhwang91/nvim-ufo nvim-fold customization with cusmized clickable icons and highlighted fold lines
 - folke/todo-comments.nvim Highlighting for Todo comments
 - norcalli/nvim-colorizer.lua Color highlighting in code
-- lumiliet/vim-twig .twig file syntax highlighting
+- nelsyeung/twig.vim .twig file syntax highlighting
 - windwp/nvim-ts-autotag autotag closing for div...
 - Custom Alpha Dashboard Icon / Quote
 - Null-Ls config for prettier & eslint

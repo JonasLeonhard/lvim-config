@@ -35,8 +35,8 @@ lvim.plugins = {
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Language Support
-  { "lumiliet/vim-twig" }, -- .twig
   { "Glench/Vim-Jinja2-Syntax" }, -- .njk
+  { "nelsyeung/twig.vim" },
   { "windwp/nvim-ts-autotag" }, -- .tsx
   -- Debugging
   { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" },

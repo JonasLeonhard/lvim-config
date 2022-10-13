@@ -6,7 +6,7 @@ local codeActions = require "lvim.lsp.null-ls.code_actions"
 
 if (null_ls_ok) then
   local prettierFiletypes = null_ls.builtins.formatting.prettier.filetypes
-  table.insert(prettierFiletypes, 'html.twig');
+  table.insert(prettierFiletypes, "twig.html");
   formatters.setup({
     {
       command = "prettier",
