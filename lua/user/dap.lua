@@ -1,12 +1,11 @@
 lvim.builtin.dap.active = true;
 
 local dap_ok, dap = pcall(require, "dap")
-local dap_ui_ok = pcall(require, "dapui")
 local dap_virtual_text_ok, dapVirtualText = pcall(require, "nvim-dap-virtual-text")
 local telescope_ok, telescope = pcall(require, "telescope")
 local mason_registry_ok, mason_registry = pcall(require, "mason-registry")
 
-if not dap_ok or not dap_ui_ok or not mason_registry_ok then
+if not dap_ok or not mason_registry_ok then
   return
 end
 

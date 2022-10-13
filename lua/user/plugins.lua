@@ -7,7 +7,6 @@ lvim.plugins = {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
-      require("hop").setup()
       require("user.hop");
     end,
   },
@@ -21,7 +20,7 @@ lvim.plugins = {
       require('neoscroll').setup()
     end
   },
-  { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
+  { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { "norcalli/nvim-colorizer.lua" },
   {
@@ -32,14 +31,14 @@ lvim.plugins = {
     "nvim-telescope/telescope-live-grep-args.nvim"
   },
   { "j-hui/fidget.nvim" },
+  { "ray-x/lsp_signature.nvim" },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Language Support
-  { 'lumiliet/vim-twig' }, -- .twig
-  { 'Glench/Vim-Jinja2-Syntax' }, -- .njk
-  { 'windwp/nvim-ts-autotag' }, -- .tsx
+  { "lumiliet/vim-twig" }, -- .twig
+  { "Glench/Vim-Jinja2-Syntax" }, -- .njk
+  { "windwp/nvim-ts-autotag" }, -- .tsx
   -- Debugging
-  { "rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap" }, -- nvim-dap installed via lunarvim
   { "nvim-telescope/telescope-dap.nvim", requires = "mfussenegger/nvim-dap" },
   { "theHamsta/nvim-dap-virtual-text", requires = "mfussenegger/nvim-dap" },
 }
