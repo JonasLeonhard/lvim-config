@@ -7,6 +7,12 @@ lvim.keys.normal_mode["<esc>"] = ":noh<cr>" -- clear ?: searches with esc
 lvim.keys.normal_mode["<D-v>"] = "p" -- paste cmd-v
 lvim.keys.normal_mode["<D-c>"] = "y" -- copy cmd-c
 
+-- moving lines with shif-jk
+lvim.keys.normal_mode["<C-k>"] = ":m .-2<CR>=="
+lvim.keys.normal_mode["<C-j>"] = ":m .+1<CR>=="
+lvim.keys.visual_block_mode["<C-j>"] = ":m '>+1<CR>gv-gv"
+lvim.keys.visual_block_mode["<C-k>"] = ":m '<-2<CR>gv-gv"
+
 -- keymappings (which_key)
 lvim.builtin.which_key.mappings["t"] = {
   name = "Toggles",
