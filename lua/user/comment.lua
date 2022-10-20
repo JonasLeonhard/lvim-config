@@ -11,7 +11,7 @@ lvim.builtin.comment.pre_hook = function(ctx)
   ft.set('html.twig', { '{#%s#}', '{#%s#}' })
 
   -- Integrate with ts_context_commentstring
-  if not vim.tbl_contains({ "javascript", "javascriptreact", "typescript", "typescriptreact" }, vim.bo.ft) then
+  if not vim.tbl_contains({ "javascriptreact", "typescriptreact" }, vim.bo.ft) then
     return
   end
 
