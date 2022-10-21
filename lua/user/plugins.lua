@@ -11,6 +11,8 @@ lvim.plugins = {
     end,
   },
   { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
+  -- Config
+  { "gpanders/editorconfig.nvim" },
   -- In-Editor
   { "petertriho/nvim-scrollbar" },
   {
