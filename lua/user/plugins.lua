@@ -34,6 +34,7 @@ lvim.plugins = {
   },
   { "j-hui/fidget.nvim" },
   { "ray-x/lsp_signature.nvim" },
+  { "nvim-pack/nvim-spectre" },
   -- Git
   { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' },
   -- Language Support

@@ -15,31 +15,31 @@ lvim.keys.visual_block_mode["<C-k>"] = ":m '<-2<CR>gv-gv"
 
 -- keymappings (which_key)
 lvim.builtin.which_key.mappings["t"] = {
-  name = "Toggles",
+  name = "  Toggles",
   _ = {
-    name = "Settings",
+    name = "漣Settings",
     b = { "<cmd>IndentBlanklineToggle<cr>", "IndentBlanklineToggle" },
     F = { "<cmd>LvimToggleFormatOnSave<cr>", "Toggle Format_on_save" },
   },
   t = {
-    name = "Terminal",
+    name = " Terminal",
     f = { "<cmd>ToggleTerm toggle<cr>", "ToggleTerm floating" },
     h = { "<cmd>ToggleTerm toggle direction=horizontal<cr>", "ToggleTerm horizontal" },
     v = { "<cmd>ToggleTerm toggle size=80 direction=vertical<cr>", "ToggleTerm vertical" }
   },
   d = {
-    name = "Todo",
+    name = " Todo",
     q = { "<cmd>TodoQuickFix<cr>", "TodoQuickFix - list todos" },
     l = { "<cmd>TodoLocList<cr>", "TodoLocList - list todo locations" },
     t = { "<cmd>TodoTrouble<cr>", "TodoTrouble - view in trouble" },
     s = { "<cmd>TodoTelescope<cr>", "TodoQuickFix - telescope view" },
   },
   e = {
-    name = "Explorer",
+    name = "פּ Explorer",
     g = { "g?", "g? -> show explorer commands" }
   },
   a = {
-    name = "Diagnostics",
+    name = " Diagnostics",
     a = { "<cmd>TroubleToggle document_diagnostics<cr>", "trouble" },
     w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace diagnostics" },
     d = { "<cmd>TroubleToggle<cr>", "global diagnostics" },
@@ -50,7 +50,7 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 
 lvim.builtin.which_key.mappings["m"] = {
-  name = "Harpoon",
+  name = " Harpoon",
   M = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
   m = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
   a = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Add File Mark" },
@@ -66,8 +66,15 @@ lvim.builtin.which_key.mappings["m"] = {
   }
 }
 
+lvim.builtin.which_key.mappings["R"] = {
+  name = " Replace",
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Current Buffer" },
+  p = { "<cmd>lua require('spectre').open()<cr>", "Project" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+}
+
 lvim.builtin.which_key.mappings["gD"] = {
-  name = "Diffview",
+  name = " Diffview",
   h = { "<cmd>DiffviewFileHistory %<cr>", "File History" },
   g = { "<cmd>DiffviewFileHistory<cr>", "Commit History global" },
   c = { "<cmd>DiffviewClose<cr>", "Diffview Close" }
