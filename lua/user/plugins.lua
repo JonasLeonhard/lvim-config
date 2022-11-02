@@ -10,7 +10,7 @@ lvim.plugins = {
       require("user.hop");
     end,
   },
-  { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
+  { "cbochs/portal.nvim" },
   -- Config
   { "gpanders/editorconfig.nvim" },
   -- In-Editor
