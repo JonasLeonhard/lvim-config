@@ -83,7 +83,8 @@ lvim.builtin.which_key.mappings["R"] = {
   name = " Replace",
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Current Buffer" },
   p = { "<cmd>lua require('spectre').open()<cr>", "Project" },
-  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+  w = { "<cmd>lua require('spectre').open({search_text=vim.fn.expand('<cword>'), path=vim.fn.expand('%')})<cr>",
+    "Replace Word" },
 }
 
 lvim.builtin.which_key.mappings["gD"] = {
