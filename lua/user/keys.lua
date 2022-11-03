@@ -78,7 +78,7 @@ lvim.builtin.which_key.mappings["m"] = {
   n = { "<cmd>:lua require('grapple').cycle_backward()<cr>", "Prev Tag" },
   a = { "<cmd>:lua require('grapple').tag()<cr>", "Add File Tag" },
   A = { "<cmd>:lua require('grapple').tag({ name = vim.fn.input('Name: ') })<cr>", "Add Named File Tag" },
-  f = { "<cmd>:lua require('grapple').tag({ name = vim.fn.input('Name: ') })<cr>", "Get Named File Tag" },
+  f = { "<cmd>:lua require('grapple').select({ name = vim.fn.input('Name: ') })<cr>", "Get Named File Tag" },
   d = { "<cmd>:lua require('grapple').untag()<cr>", "Untag File Tag" },
   D = { "<cmd>:lua require('grapple').reset()<cr>", "Reset File Tags" },
 }
