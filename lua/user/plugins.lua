@@ -10,7 +10,8 @@ lvim.plugins = {
       require("user.hop");
     end,
   },
-  { "cbochs/portal.nvim" },
+  { "cbochs/grapple.nvim" },
+  { "cbochs/portal.nvim", requires = { "cbochs/grapple.nvim" } },
   -- Config
   { "gpanders/editorconfig.nvim" },
   -- In-Editor

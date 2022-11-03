@@ -74,9 +74,13 @@ lvim.builtin.which_key.mappings["m"] = {
       v = { "<cmd>:lua require('portal').jump_forward({ query = {'valid'} })<cr>", "(Valid) Jump Forward<C-i>" },
     }
   },
-  a = { "<cmd>:lua require('portal.tag').toggle()<cr>", "Add File Tag" },
-  d = { "<cmd>:lua require('portal.tag').untag()<cr>", "Untag File Tag" },
-  D = { "<cmd>:lua require('portal.tag').reset()<cr>", "Reset File Tags" },
+  m = { "<cmd>:lua require('grapple').cycle_forward()<cr>", "Next Tag" },
+  n = { "<cmd>:lua require('grapple').cycle_backward()<cr>", "Prev Tag" },
+  a = { "<cmd>:lua require('grapple').tag()<cr>", "Add File Tag" },
+  A = { "<cmd>:lua require('grapple').tag({ name = vim.fn.input('Name: ') })<cr>", "Add Named File Tag" },
+  f = { "<cmd>:lua require('grapple').tag({ name = vim.fn.input('Name: ') })<cr>", "Get Named File Tag" },
+  d = { "<cmd>:lua require('grapple').untag()<cr>", "Untag File Tag" },
+  D = { "<cmd>:lua require('grapple').reset()<cr>", "Reset File Tags" },
 }
 
 lvim.builtin.which_key.mappings["R"] = {
