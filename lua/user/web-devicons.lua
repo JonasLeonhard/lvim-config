@@ -5,19 +5,24 @@ if not ok then
 end
 
 devicons.set_icon({
-  ["njk"] = {
+  njk = {
     icon = "",
     color = "#374c0b",
     name = "Nunjucks",
   },
-  ["twig"] = {
+  twig = {
     icon = "",
     color = "#8FAA54",
     name = "Twig",
   },
-  ["applescript"] = {
+  applescript = {
     icon = "",
     color = "#ffffff",
     name = "Applescript",
+  },
+  cjs = {
+    icon = "",
+    color = "#e59c00",
+    name = "CommonJs"
   }
 })
