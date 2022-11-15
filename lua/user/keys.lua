@@ -14,8 +14,8 @@ lvim.keys.visual_block_mode["<C-j>"] = ":m '>+1<CR>gv-gv"
 lvim.keys.visual_block_mode["<C-k>"] = ":m '<-2<CR>gv-gv"
 
 --- ( portal ) jumplist
-lvim.keys.normal_mode["<C-o>"] = ":lua require('portal').jump_backward()<CR>";
-lvim.keys.normal_mode["<C-i>"] = ":lua require('portal').jump_forward()<CR>";
+lvim.keys.normal_mode["<C-S-o>"] = ":lua require('portal').jump_backward()<CR>";
+lvim.keys.normal_mode["<C-S-i>"] = ":lua require('portal').jump_forward()<CR>";
 
 -- keymappings (which_key)
 lvim.builtin.which_key.mappings["t"] = {
