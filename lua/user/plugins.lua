@@ -10,12 +10,12 @@ lvim.plugins = {
       require("user.hop");
     end,
   },
-  { "cbochs/grapple.nvim" },
-  { "cbochs/portal.nvim", requires = { "cbochs/grapple.nvim" } },
+  { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" },
+  { "cbochs/portal.nvim", requires = { "ThePrimeagen/harpoon" } },
   -- Config
   { "gpanders/editorconfig.nvim" },
   -- In-Editor
-  { "petertriho/nvim-scrollbar" },
+  { "petertriho/nvim-scrollbar", requires = { "lewis6991/gitsigns.nvim" } },
   {
     "karb94/neoscroll.nvim",
     event = "WinScrolled",

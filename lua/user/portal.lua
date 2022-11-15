@@ -3,4 +3,12 @@ if not (portal_ok) then
   return
 end
 
-portal.setup({ query = { "tagged", "valid" } });
+portal.setup({
+  integrations = {
+    harpoon = true
+  },
+  query = {
+    "harpoon",
+    "valid"
+  }
+});

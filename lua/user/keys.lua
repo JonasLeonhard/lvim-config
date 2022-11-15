@@ -54,33 +54,46 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 
 lvim.builtin.which_key.mappings["m"] = {
-  name = " Portal",
+  name = " Portal / Harpoon",
   o = { "<cmd>:lua require('portal').jump_backward()<cr>", "Jump Backward <C-o>" },
   i = { "<cmd>:lua require('portal').jump_forward()<cr>", "Jump Forward <C-i>" },
   q = {
     name = " Query",
     o = {
       name = "<- backward",
-      t = { "<cmd>:lua require('portal').jump_backward({ query = {'tagged'} })<cr>", "(Tagged) Jump Backward <C-o>" },
+      t = { "<cmd>:lua require('portal').jump_backward({ query = {'harpoon'} })<cr>", "(Tagged) Jump Backward <C-o>" },
       m = { "<cmd>:lua require('portal').jump_backward({ query = {'modified'} })<cr>", "(Modified) Jump Backward <C-o>" },
       d = { "<cmd>:lua require('portal').jump_backward({ query = {'different'} })<cr>", "(Different) Jump Backward <C-o>" },
       v = { "<cmd>:lua require('portal').jump_backward({ query = {'valid'} })<cr>", "(Valid) Jump Backward <C-o>" },
     },
     i = {
       name = "-> forward",
-      t = { "<cmd>:lua require('portal').jump_forward({ query = {'tagged'} })<cr>", "(Tagged) Jump Forward<C-i>" },
+      t = { "<cmd>:lua require('portal').jump_forward({ query = {'harpoon'} })<cr>", "(Tagged) Jump Forward<C-i>" },
       m = { "<cmd>:lua require('portal').jump_forward({ query = {'modified'} })<cr>", "(Modified) Jump Forward<C-i>" },
       d = { "<cmd>:lua require('portal').jump_forward({ query = {'different'} })<cr>", "(Different) Jump Forward<C-i>" },
       v = { "<cmd>:lua require('portal').jump_forward({ query = {'valid'} })<cr>", "(Valid) Jump Forward<C-i>" },
     }
   },
-  m = { "<cmd>:lua require('grapple').cycle_forward()<cr>", "Next Tag" },
-  n = { "<cmd>:lua require('grapple').cycle_backward()<cr>", "Prev Tag" },
-  a = { "<cmd>:lua require('grapple').tag()<cr>", "Add File Tag" },
-  A = { "<cmd>:lua require('grapple').tag({ name = vim.fn.input('Name: ') })<cr>", "Add Named File Tag" },
-  f = { "<cmd>:lua require('grapple').select({ name = vim.fn.input('Name: ') })<cr>", "Get Named File Tag" },
-  d = { "<cmd>:lua require('grapple').untag()<cr>", "Untag File Tag" },
-  D = { "<cmd>:lua require('grapple').reset()<cr>", "Reset File Tags" },
+  M = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
+  m = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
+  a = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Add File Mark" },
+  d = { "<cmd>:lua require('harpoon.mark').toggle_file()<cr>", "Toggle File Mark" },
+  g = {
+    name = "GoTo",
+    n = { "<cmd>:lua require('harpoon.ui').nav_next() <cr>", "Next Mark" },
+    b = { "<cmd>:lua require('harpoon.ui').nav_prev()<cr>", "Prev Mark" },
+    q = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(1)" },
+    w = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(2)" },
+    e = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(3)" },
+    r = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(4)" },
+    t = { "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>", "Navigate(5)" },
+  },
+  t = {
+    name = "Terminal",
+    q = { "<cmd>:lua require('harpoon.term').gotoTerminal(1) <cr>", "GoToTerminal(1)" },
+    w = { "<cmd>:lua require('harpoon.term').gotoTerminal(2) <cr>", "GoToTerminal(2)" },
+    e = { "<cmd>:lua require('harpoon.term').gotoTerminal(3) <cr>", "GoToTerminal(3)" },
+  }
 }
 
 lvim.builtin.which_key.mappings["R"] = {
