@@ -15,6 +15,7 @@ lvim.plugins = {
   -- Config
   { "gpanders/editorconfig.nvim" },
   -- In-Editor
+  { "lewis6991/gitsigns.nvim" },
   { "petertriho/nvim-scrollbar", requires = { "lewis6991/gitsigns.nvim" } },
   {
     "karb94/neoscroll.nvim",
