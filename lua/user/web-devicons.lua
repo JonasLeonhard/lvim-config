@@ -24,5 +24,15 @@ devicons.set_icon({
     icon = "",
     color = "#e59c00",
     name = "CommonJs"
+  },
+  mod = {
+    icon = "",
+    color = "#e59c00",
+    name = "GoModule"
+  },
+  sum = {
+    icon = "",
+    color = "#e59c00",
+    name = "GoModule"
   }
 })
