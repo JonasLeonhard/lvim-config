@@ -3,6 +3,7 @@ lvim.plugins = {
   -- Theme
   { "catppuccin/nvim", as = "catppuccin" },
   -- Navigation
+  { "christoomey/vim-tmux-navigator" },
   {
     "phaazon/hop.nvim",
     event = "BufRead",
