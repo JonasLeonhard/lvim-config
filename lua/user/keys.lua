@@ -31,6 +31,13 @@ lvim.builtin.which_key.mappings["t"] = {
     h = { "<cmd>ToggleTerm toggle direction=horizontal<cr>", "ToggleTerm horizontal" },
     v = { "<cmd>ToggleTerm toggle size=80 direction=vertical<cr>", "ToggleTerm vertical" }
   },
+  T = {
+    name = "Tmux",
+    h = { "<cmd>TmuxNavigateLeft<cr>", "Navigate Left" },
+    j = { "<cmd>TmuxNavigateDown<cr>", "Navigate Down" },
+    k = { "<cmd>TmuxNavigateUp<cr>", "Navigate Up" },
+    l = { "<cmd>TmuxNavigateRight<cr>", "Navigate Right" }
+  },
   d = {
     name = " Todo",
     q = { "<cmd>TodoQuickFix<cr>", "TodoQuickFix - list todos" },
