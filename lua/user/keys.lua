@@ -2,8 +2,8 @@
 lvim.leader = "space"
 
 -- custom keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>" -- save
 lvim.keys.normal_mode["<esc>"] = ":noh<cr>" -- clear ?: searches with esc
+lvim.keys.normal_mode["<C-s>"] = ":w<cr>" -- save
 lvim.keys.normal_mode["<D-v>"] = "p" -- paste cmd-v
 lvim.keys.normal_mode["<D-c>"] = "y" -- copy cmd-c
 
@@ -51,7 +51,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 lvim.builtin.which_key.mappings["m"] = {
   name = "  Harpoon",
-  M = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
+  l = { "<cmd>Telescope harpoon marks<cr>", "list Marks" },
   m = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
   a = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Add File Mark" },
   d = { "<cmd>:lua require('harpoon.mark').toggle_file()<cr>", "Toggle File Mark" },
@@ -70,6 +70,15 @@ lvim.builtin.which_key.mappings["m"] = {
     q = { "<cmd>:lua require('harpoon.term').gotoTerminal(1) <cr>", "GoToTerminal(1)" },
     w = { "<cmd>:lua require('harpoon.term').gotoTerminal(2) <cr>", "GoToTerminal(2)" },
     e = { "<cmd>:lua require('harpoon.term').gotoTerminal(3) <cr>", "GoToTerminal(3)" },
+  },
+  M = {
+    name = "Marks",
+    t = { "<cmd>MarksToggleSigns<cr>" },
+    a = { "<cmd>MarksListAll<cr>", "List All" },
+    b = { "<cmd>MarksListBuf<cr>", "List Buffer" },
+    g = { "<cmd>MarksListGlobal<cr>", "List Global" },
+    h = { "<cmd>:lua print('[mx] = set Mark <x>') print('[m,] = Set the next alphabetical lowercase mark') print('[dmx] = delete mark <x>') print('[dm-] = delete all marks on the current line') print('[dm<space>] = delete all marks in buffer') print('[m]] = move to next mark') print('[m[] = move to prev mark') print('[m:] = preview mark') print('[m0-9] = bookmark from bookmarkgroup') print('[dm0-9] = delete bookmark from bookmarkgroup') print('[m{] = move to next bookmark') print('[m}] = move to prev bookmark') print('[dm=] = delete bookmark under cursor')<cr>",
+      "Keybind help" }
   }
 }
 
@@ -87,3 +96,5 @@ lvim.builtin.which_key.mappings["gD"] = {
   g = { "<cmd>DiffviewFileHistory<cr>", "Commit History global" },
   c = { "<cmd>DiffviewClose<cr>", "Diffview Close" }
 }
+
+lvim.builtin.which_key.setup.plugins.marks = true;

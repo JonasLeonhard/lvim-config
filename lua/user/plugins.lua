@@ -11,6 +11,7 @@ lvim.plugins = {
     end,
   },
   { "ThePrimeagen/harpoon", dependencies = "nvim-lua/plenary.nvim" },
+  { "chentoast/marks.nvim" },
   -- Config
   { "gpanders/editorconfig.nvim" },
   -- In-Editor
