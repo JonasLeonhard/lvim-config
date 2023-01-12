@@ -21,7 +21,7 @@ lvim.plugins = {
     "karb94/neoscroll.nvim",
     event = "WinScrolled",
     config = function()
-      require('neoscroll').init()
+      require('neoscroll').setup()
     end
   },
   { "kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async" },
