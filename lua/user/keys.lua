@@ -13,10 +13,6 @@ lvim.keys.normal_mode["<C-j>"] = ":m .+1<CR>=="
 lvim.keys.visual_block_mode["<C-j>"] = ":m '>+1<CR>gv-gv"
 lvim.keys.visual_block_mode["<C-k>"] = ":m '<-2<CR>gv-gv"
 
---- ( portal ) jumplist
-lvim.keys.normal_mode["<C-S-o>"] = ":lua require('portal').jump_backward()<CR>";
-lvim.keys.normal_mode["<C-S-i>"] = ":lua require('portal').jump_forward()<CR>";
-
 -- keymappings (which_key)
 lvim.builtin.which_key.mappings["t"] = {
   name = "  Toggles",
@@ -54,26 +50,7 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 
 lvim.builtin.which_key.mappings["m"] = {
-  name = " Portal / Harpoon",
-  o = { "<cmd>:lua require('portal').jump_backward()<cr>", "Jump Backward <C-o>" },
-  i = { "<cmd>:lua require('portal').jump_forward()<cr>", "Jump Forward <C-i>" },
-  q = {
-    name = " Query",
-    o = {
-      name = "<- backward",
-      t = { "<cmd>:lua require('portal').jump_backward({ query = {'harpoon'} })<cr>", "(Tagged) Jump Backward <C-o>" },
-      m = { "<cmd>:lua require('portal').jump_backward({ query = {'modified'} })<cr>", "(Modified) Jump Backward <C-o>" },
-      d = { "<cmd>:lua require('portal').jump_backward({ query = {'different'} })<cr>", "(Different) Jump Backward <C-o>" },
-      v = { "<cmd>:lua require('portal').jump_backward({ query = {'valid'} })<cr>", "(Valid) Jump Backward <C-o>" },
-    },
-    i = {
-      name = "-> forward",
-      t = { "<cmd>:lua require('portal').jump_forward({ query = {'harpoon'} })<cr>", "(Tagged) Jump Forward<C-i>" },
-      m = { "<cmd>:lua require('portal').jump_forward({ query = {'modified'} })<cr>", "(Modified) Jump Forward<C-i>" },
-      d = { "<cmd>:lua require('portal').jump_forward({ query = {'different'} })<cr>", "(Different) Jump Forward<C-i>" },
-      v = { "<cmd>:lua require('portal').jump_forward({ query = {'valid'} })<cr>", "(Valid) Jump Forward<C-i>" },
-    }
-  },
+  name = "  Harpoon",
   M = { "<cmd>Telescope harpoon marks<cr>", "Marks" },
   m = { "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>", "Marks (builtin)" },
   a = { "<cmd>:lua require('harpoon.mark').add_file()<cr>", "Add File Mark" },

@@ -11,7 +11,6 @@ lvim.plugins = {
     end,
   },
   { "ThePrimeagen/harpoon", dependencies = "nvim-lua/plenary.nvim" },
-  { "cbochs/portal.nvim", dependencies = { "ThePrimeagen/harpoon" } },
   -- Config
   { "gpanders/editorconfig.nvim" },
   -- In-Editor
