@@ -1,6 +1,6 @@
 vim.g.syntax_on = true
 
-vim.o.guifont = "MesloLGSDZ Nerd Font:h15" --:h<FontSize>
+vim.o.guifont = "MesloLGMDZ Nerd Font:h15" --:h<FontSize>
 vim.o.syntax = "on"
 
 vim.opt.relativenumber = true
@@ -10,6 +10,7 @@ vim.o.ch = 0 -- commandheight
 lvim.format_on_save = true
 lvim.log.level = "warn"
 lvim.builtin.autopairs.active = false
+lvim.use_icons = true
 
 lvim.builtin.bufferline.active = true
 vim.opt.showtabline = 0
