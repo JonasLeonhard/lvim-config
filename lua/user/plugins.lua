@@ -13,7 +13,8 @@ lvim.plugins = {
   { "ThePrimeagen/harpoon", dependencies = "nvim-lua/plenary.nvim" },
   { "chentoast/marks.nvim" },
   -- Config
-  { "gpanders/editorconfig.nvim" },
+  -- { "gpanders/editorconfig.nvim" },
+  { "tpope/vim-sleuth" }, -- guess indentation, takes editorconfig into consideration
   -- In-Editor
   { "lewis6991/gitsigns.nvim" },
   { "petertriho/nvim-scrollbar", dependencies = { "lewis6991/gitsigns.nvim" } },
