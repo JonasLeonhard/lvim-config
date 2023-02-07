@@ -98,4 +98,7 @@ lvim.builtin.which_key.mappings["gD"] = {
   c = { "<cmd>DiffviewClose<cr>", "Diffview Close" }
 }
 
+lvim.builtin.which_key.mappings.g.g = { "<cmd>lua require('user.terminal').gitui_toggle()<cr>",
+  "Gitui" }
+
 lvim.builtin.which_key.setup.plugins.marks = true;

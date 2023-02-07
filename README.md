@@ -71,6 +71,7 @@ This config configures Plugins with Packer on top of the Lunarvim base-configura
 - Custom Alpha Dashboard Icon / Quote
 - Null-Ls config for prettier & eslint
 - DAP for NodeJS, Firefox and Rust via CodeLLDB
+- gitui
 
 ## Setup
 
