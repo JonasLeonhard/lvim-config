@@ -39,6 +39,7 @@ lvim.plugins = {
   { "ray-x/lsp_signature.nvim" },
   { "nvim-pack/nvim-spectre" },
   { "tpope/vim-surround" },
+  { "rmagatti/alternate-toggler" },
   -- Git
   { "sindrets/diffview.nvim", dependencies = 'nvim-lua/plenary.nvim' },
   -- Language Support

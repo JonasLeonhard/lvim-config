@@ -3,6 +3,7 @@ require "user.plugins" -- run :PackerUpdate to istall new plugins
 
 -- plugin configs
 require "user.alpha"
+require "user.alternate-toggler"
 require "user.autocommands"
 require "user.colorizer"
 require "user.comment"

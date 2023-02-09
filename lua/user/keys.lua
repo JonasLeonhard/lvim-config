@@ -38,7 +38,7 @@ lvim.builtin.which_key.mappings["t"] = {
     name = "פּ Explorer",
     g = { "g?", "g? -> show explorer commands" }
   },
-  a = {
+  A = {
     name = " Diagnostics",
     a = { "<cmd>TroubleToggle document_diagnostics<cr>", "trouble" },
     w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace diagnostics" },
@@ -47,6 +47,7 @@ lvim.builtin.which_key.mappings["t"] = {
     l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
     r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
   },
+  a = { "<cmd>ToggleAlternate<cr>", "Toggle alternate under cursor" }
 }
 
 lvim.builtin.which_key.mappings["m"] = {
