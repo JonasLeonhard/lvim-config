@@ -17,3 +17,10 @@ vim.opt.showtabline = 0
 
 lvim.builtin.cmp.experimental.ghost_text = true
 lvim.builtin.treesitter.highlight.enabled = true
+
+-- highlight listchars (non whitespace, trailing whitespace) :h listchars :h list
+vim.opt.list = true;
+vim.opt.listchars = 'trail:$,nbsp:_,'
+vim.api.nvim_create_autocmd("BufEnter", {
+  command = "highlight Whitespace guifg=White guibg=#F38BA8 ctermfg=White guibg=#F38BA8",
+})
