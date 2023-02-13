@@ -96,7 +96,8 @@ lvim.builtin.which_key.mappings["gD"] = {
   name = " Diffview",
   h = { "<cmd>DiffviewFileHistory %<cr>", "File History" },
   g = { "<cmd>DiffviewFileHistory<cr>", "Commit History global" },
-  c = { "<cmd>DiffviewClose<cr>", "Diffview Close" }
+  c = { "<cmd>DiffviewClose<cr>", "Diffview Close" },
+  o = { "<cmd>DiffviewOpen<cr>", "Diffview Open" }
 }
 
 lvim.builtin.which_key.mappings.g.g = { "<cmd>lua require('user.terminal').gitui_toggle()<cr>",
