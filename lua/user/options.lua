@@ -18,20 +18,3 @@ vim.opt.showtabline = 0
 
 lvim.builtin.cmp.experimental.ghost_text = true
 lvim.builtin.treesitter.highlight.enabled = true
-
--- highlight listchars (non whitespace, trailing whitespace) :h listchars :h list
-vim.opt.list = true;
-vim.opt.listchars = 'trail:·,nbsp:·,'
-vim.api.nvim_create_autocmd("BufEnter", {
-  command = "highlight Whitespace guifg=White guibg=#F38BA8 ctermfg=White guibg=#F38BA8",
-})
-
--- disable highlighting while typing (InsertMode)
-vim.api.nvim_create_autocmd("InsertEnter", {
-  command = "highlight Whitespace guifg=#45475a guibg=#212035",
-})
-
--- enable highlighting while in normalMode
-vim.api.nvim_create_autocmd("InsertLeave", {
-  command = "highlight Whitespace guifg=White guibg=#F38BA8 ctermfg=White guibg=#F38BA8",
-})
