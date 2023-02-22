@@ -19,8 +19,8 @@ local highlightListchars = function()
   end
 
   -- https://vim.fandom.com/wiki/Highlight_unwanted_spaces#Highlighting_with_the_match_command
-  vim.cmd [[ match NBSP /\u00a0/ ]]
-  vim.cmd [[ match TrailingSpaceChar /\s\+$/ ]]
+  vim.cmd [[ syntax match NBSP " " ]] -- <-- INFO: this is a unicode nbsp character
+  vim.cmd [[ syntax match TrailingSpaceChar /\s\+$/ ]]
   vim.api.nvim_set_hl(0, "NBSP",
     { fg = "White", bg = themeColors.red })
   vim.api.nvim_set_hl(0, "TrailingSpaceChar",
