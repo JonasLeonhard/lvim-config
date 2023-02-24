@@ -7,6 +7,8 @@ local codeActions = require "lvim.lsp.null-ls.code_actions"
 if (null_ls_ok) then
   local prettierFiletypes = null_ls.builtins.formatting.prettier.filetypes
   table.insert(prettierFiletypes, "twig.html");
+  table.insert(prettierFiletypes, "svelte");
+
   formatters.setup({
     {
       command = "prettier",
@@ -15,11 +17,20 @@ if (null_ls_ok) then
     },
   })
 
+  local eslintFiletypes = null_ls.builtins.diagnostics.eslint.filetypes;
+  table.insert(eslintFiletypes, "svelte");
+
   linters.setup({
-    { command = "eslint" },
+    {
+      command = "eslint",
+      filetypes = eslintFiletypes
+    },
   })
 
   codeActions.setup({
-    { command = "eslint" },
+    {
+      command = "eslint",
+      filetypes = eslintFiletypes
+    },
   })
 end
