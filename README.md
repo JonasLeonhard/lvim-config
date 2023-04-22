@@ -10,9 +10,9 @@ Custom <a href="https://www.lunarvim.org/)">Lvim</a> Neovim Configuration. Aimin
 
 ## Status
 
-- [x] _in progress_
+- [ ] _in progress_
 - [ ] _finished_
-- [ ] _no longer continued_
+- [x] _no longer continued_. Although Lunarvim is great! I rolled up my own config, i just wanted everything to be just as i like it: https://github.com/JonasLeonhard/neovim-config.
 
 ## Table of contents
 
